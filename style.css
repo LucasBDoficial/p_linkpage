@@ -7,7 +7,7 @@
   
   body {
     height: 100vh;
-    background: url(./image/dark.jpg) no-repeat top center/cover;
+    background: url(./image/darkd.jpg) no-repeat top center/cover;
   }
 
   .container {
@@ -99,7 +99,7 @@
   
   @media (max-width: 800px) {
     body {
-      background: url(./image/darkmobi.jpg) no-repeat top center/cover;
+      background: url(./image/darkm.jpg) no-repeat top center/cover;
     }
   }
   
