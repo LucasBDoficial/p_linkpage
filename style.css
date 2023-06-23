@@ -7,8 +7,49 @@
   
   body {
     height: 100vh;
-    background: url(./image/darkp.jpg) no-repeat top center/cover;
+    background-color: black;
   }
+
+  .background{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .ball{
+    position: absolute;
+    display: flex;
+    z-index: 0;
+  }
+
+  .ball span{
+    width: 30px;
+    height: 30px;
+    background: gray;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(116, 116, 116, 0.349),
+     0 0 50px gray,
+     0 0 100px gray;
+     animation: animar calc(150s / var(--i)) linear infinite;
+  }
+
+  @keyframes animar {
+    0% {
+      transform:  translateY(100vh) scale(0);
+    }
+    100% {
+      transform:  translateY(-10vh) scale(1);
+    }
+  }
+
+  .ball span:nth-of-type(even) {
+    background: white;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.205),
+     0 0 50px white,
+     0 0 100px white;
+    }
 
   .container {
     width: 100%;
@@ -20,7 +61,13 @@
   /* profile */
   .profile {
     text-align: center;
-    padding: 30px 24px;
+    padding: 210px 24px 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
   }
   
   .profile img {
@@ -28,6 +75,8 @@
     height: 200px;
     border-radius: 50%;
     background-image: cover;
+    position: absolute;
+    top: 0;
   }
   
   .profile p {
@@ -97,9 +146,9 @@
     color: white;
   }
   
-  @media (max-width: 800px) {
+  /* @media (max-width: 800px) {
     body {
       background: url(./image/darkm.jpg) no-repeat top center/cover;
     }
-  }
+  } */
   
